@@ -4,14 +4,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployerComponent } from './employer/employer.component';
 import { EmployeeComponent } from './employee/employee.component';
+import {EmployerComponent} from './employer/employer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    EmployeeComponent,
     EmployerComponent,
-    EmployeeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,36 @@
-<p>
-  employee works!
-</p>
+<form [formGroup]="bioSection">
+  <label>
+    First Name:
+    <input type="text" [formControl]="bioSection.controls.firstName">
+  </label>
+  <label>
+    Last Name:
+    <input type="text" [formControl]="bioSection.controls.lastName">
+  </label>
+  <label>
+    Age:
+    <input type="number" [formControl]="bioSection.controls.age">
+  </label>
+  <!-- The disabled attribute controls prevents submission if the form is not valid -->
+  <button type="submit" [disabled]="!bioSection.valid">Submit Application</button>
+</form>
+<div style="width: 100%;">
+  @if (!bioSection.valid){ <!-- If the form is not valid... -->
+    <div style="width: 300px; margin: auto; padding: 20px; background-color: palegoldenrod">
+      <b>Validation errors</b>
+      <ol>
+        <!-- For each control, check that the given parameters have been met-->
+        @if (bioSection.controls.firstName.errors?.['minlength'] ?? bioSection.controls.firstName.errors?.['required']){
+          <li>The first name is not long enough, or not specified.</li>
+        }
+        @if (bioSection.controls.lastName.errors?.['minlength'] ?? bioSection.controls.lastName.errors?.['required']){
+          <li>The last name is not long enough, or not specified.</li>
+        }
+        @if (bioSection.controls.age.errors?.['min'] ?? bioSection.controls.age.errors?.['required']){
+          <li>You must be over 18 to sign up</li>
+
+        }
+      </ol>
+    </div>
+  }
+</div>

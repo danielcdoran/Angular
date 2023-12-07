@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms'
+import { UntypedFormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-employer',
@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms'
   styleUrls: ['./employer.component.css']
 })
 export class EmployerComponent implements OnInit {
-  position = new FormControl('');
+  position = new UntypedFormControl('');
 
   constructor() { }
 
