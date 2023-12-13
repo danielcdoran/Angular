@@ -1,4 +1,6 @@
-<form [formGroup]="bioSection">
+<h3>Bio Details</h3>
+
+<form [formGroup]="bioSection" style="display: flex; flex-direction: column; gap: 15px;" (ngSubmit)="submitForm()">
   <label>
     First Name:
     <input type="text" [formControl]="bioSection.controls.firstName">
@@ -11,6 +13,63 @@
     Age:
     <input type="number" [formControl]="bioSection.controls.age">
   </label>
+
+  <label>
+    Years experience:
+    <app-custom-stepper [formControl]="bioSection.controls.yearsExperience"></app-custom-stepper>
+  </label>
+
+  <label>
+    Language:
+    <input [formControl]="bioSection.controls.languageSearch" >
+  </label>
+
+  @if (filteredLanguages().state === response.EMPTY){
+    Please specify a language to search for.
+  }
+  @if (filteredLanguages().state === response.LOADING){
+    Loading languages...
+  } @else if (filteredLanguages().state === response.LOADED){
+    <select size="5">
+      @for (language of filteredLanguages().languages; track language)
+      {
+        <option>{{language}}</option>
+      } @empty {
+        <p>No languages match...</p>
+      }
+    </select>
+  }
+
+  <div [formGroup]="bioSection.controls.stackDetails">
+    <h3>Stack Details</h3>
+
+    <label>
+      Stack:
+      <input type="text" formControlName="stack" [formControl]="bioSection.controls.stackDetails.controls.stack">
+    </label> <br>
+
+    <label>
+      Experience:
+      <input type="text" formControlName="experience" [formControl]="bioSection.controls.stackDetails.controls.experience">
+    </label>
+  </div>
+
+
+  <div [formGroup]="bioSection.controls.address">
+    <h3>Address</h3>
+
+    <label>
+      Country:
+      <input type="text" [formControl]="bioSection.controls.address.controls.country">
+    </label> <br>
+
+    <label>
+      City:
+      <input type="text" formControlName="city" [formControl]="bioSection.controls.address.controls.city">
+    </label>
+  </div>
+
+
   <!-- The disabled attribute controls prevents submission if the form is not valid -->
   <button type="submit" [disabled]="!bioSection.valid">Submit Application</button>
 </form>
@@ -28,9 +87,10 @@
         }
         @if (bioSection.controls.age.errors?.['min'] ?? bioSection.controls.age.errors?.['required']){
           <li>You must be over 18 to sign up</li>
-
         }
       </ol>
     </div>
   }
 </div>
+
+<!--{{bioSection.controls.drawing.value | json}}-->
