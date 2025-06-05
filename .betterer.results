@@ -1,0 +1,12 @@
+// BETTERER RESULTS V2.
+// 
+// If this file contains merge conflicts, use `betterer merge` to automatically resolve them:
+// https://phenomnomnominal.github.io/betterer/docs/results-file/#merge
+//
+exports[`stricter compilation`] = {
+  value: `{
+    "src/app/employee/employee.component.ts:3887368793": [
+      [72, 33, 4, "No overload matches this call.\\n  Overload 1 of 5, \'(value: number | FormControlState<number>, opts: FormControlOptions & { nonNullable: true; }): FormControl<number>\', gave the following error.\\n    Argument of type \'null\' is not assignable to parameter of type \'number | FormControlState<number>\'.\\n  Overload 2 of 5, \'(value: number | FormControlState<number>, opts: FormControlOptions & { initialValueIsDefault: true; }): FormControl<number>\', gave the following error.\\n    Argument of type \'null\' is not assignable to parameter of type \'number | FormControlState<number>\'.\\n  Overload 3 of 5, \'(value: number | FormControlState<number>, validatorOrOpts?: ValidatorFn | ValidatorFn[] | FormControlOptions | null | undefined, asyncValidator?: AsyncValidatorFn | ... 2 more ... | undefined): FormControl<...>\', gave the following error.\\n    Argument of type \'null\' is not assignable to parameter of type \'number | FormControlState<number>\'.", "2087897566"]
+    ]
+  }`
+};

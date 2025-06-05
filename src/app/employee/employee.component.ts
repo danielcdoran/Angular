@@ -116,7 +116,7 @@ export class EmployeeComponent implements OnInit {
 
 export interface LanguageResponse {
   state: LanguageResponseState,
-  languages: Array<string>
+  languages: string[]
 }
 
 export enum LanguageResponseState {
