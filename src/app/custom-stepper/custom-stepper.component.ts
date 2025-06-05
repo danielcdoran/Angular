@@ -34,10 +34,10 @@ export class CustomStepperComponent implements ControlValueAccessor {
     this.onTouch = fn;
   }
 
-  // Called when the form control is disabled in code
-  setDisabledState(isDisabled: boolean): void {
-    // You can implement this method if your control needs to be disabled
-  }
+  // // Called when the form control is disabled in code
+  // setDisabledState(isDisabled: boolean): void {
+  //   // You can implement this method if your control needs to be disabled
+  // }
 
   // -- Internal Stepper Implementation --
   // Increase stepper by one

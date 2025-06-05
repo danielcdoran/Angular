@@ -11,7 +11,7 @@ export class EmployerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
   callingFunction() {
     this.position.setValue('backend engineer');

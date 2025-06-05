@@ -1,6 +1,6 @@
 import {Component, OnInit, signal} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {debounceTime, delay} from 'rxjs/operators';
+import {debounceTime} from 'rxjs/operators';
 
 @Component({
   selector: 'app-employee',
@@ -116,7 +116,7 @@ export class EmployeeComponent implements OnInit {
 
 export interface LanguageResponse {
   state: LanguageResponseState,
-  languages: Array<string>
+  languages: string[]
 }
 
 export enum LanguageResponseState {
