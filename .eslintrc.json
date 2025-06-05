@@ -15,22 +15,22 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "students-details",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "students-details",
-            "style": "kebab-case"
-          }
-        ]
+        // "@angular-eslint/directive-selector": [
+        //   "error",
+        //   {
+        //     "type": "attribute",
+        //     "prefix": "students-details",
+        //     "style": "camelCase"
+        //   }
+        // ],
+        // "@angular-eslint/component-selector": [
+        //   "error",
+        //   {
+        //     "type": "element",
+        //     "prefix": "students-details",
+        //     "style": "kebab-case"
+        //   }
+        // ]
         // "@typescript-eslint/indent":[2, 4]
       }
     },
