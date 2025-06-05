@@ -1,9 +1,9 @@
 import {Component, OnInit, signal} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {debounceTime, delay} from 'rxjs/operators';
+import {debounceTime} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-employee',
+  selector: 'students-details',
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
