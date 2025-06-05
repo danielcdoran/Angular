@@ -18,5 +18,11 @@
       "dom"
     ],
     "useDefineForClassFields": false
-  }
+  },
+      "angularCompilerOptions": {
+      "strictTemplates": true,
+      "preserveWhitespaces": true,
+      // ...
+      "disableTypeScriptVersionCheck": true
+    }
 }
